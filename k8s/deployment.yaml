@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jw-news-reader-api
+  labels:
+    app: jw-news-reader-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jw-news-reader-api
+  template:
+    metadata:
+      labels:
+        app: jw-news-reader-api
+    spec:
+      containers:
+        - name: jw-news-reader-api
+          image: brunomassaini/jw-news-reader-api:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: JW_NEWS_READER_INSECURE_SSL
+              value: "0"
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 3
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"

@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: jw-news-reader-api
+  labels:
+    app: jw-news-reader-api
+  annotations:
+    konghq.com/strip-path: "true"
+    kubernetes.io/ingress.class: "kong"
+spec:
+  ingressClassName: kong
+  rules:
+    - host: api.massaini.xyz
+      http:
+        paths:
+          - path: /jw-news-reader-api
+            pathType: Prefix
+            backend:
+              service:
+                name: jw-news-reader-api
+                port:
+                  number: 8000

@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+httpx
+beautifulsoup4
+lxml
+markdownify
+readability-lxml
+certifi

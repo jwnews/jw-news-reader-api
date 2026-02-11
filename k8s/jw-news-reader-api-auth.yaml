@@ -1,0 +1,24 @@
+apiVersion: configuration.konghq.com/v1
+kind: KongPlugin
+metadata:
+  name: jw-news-reader-api-key-auth
+  namespace: default
+plugin: key-auth
+config:
+  key_names:
+    - apikey
+  key_in_header: true
+  key_in_query: false
+  key_in_body: false
+  hide_credentials: true
+---
+apiVersion: configuration.konghq.com/v1
+kind: KongConsumer
+metadata:
+  name: jw-news-reader-api-consumer
+  namespace: default
+  annotations:
+    kubernetes.io/ingress.class: "kong"
+username: jw-news-reader-api-consumer
+credentials:
+  - jw-news-reader-api-key-auth-cred
