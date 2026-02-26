@@ -1,0 +1,1 @@
+/Users/brunomassaini/Git/JWNews/jw-news-reader-api/target/release/jw-news-reader-api: /Users/brunomassaini/Git/JWNews/jw-news-reader-api/src/extract.rs /Users/brunomassaini/Git/JWNews/jw-news-reader-api/src/main.rs /Users/brunomassaini/Git/JWNews/jw-news-reader-api/src/models.rs

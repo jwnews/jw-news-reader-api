@@ -1,0 +1,5 @@
+/Users/brunomassaini/Git/JWNews/jw-news-reader-api/target/release/build/httparse-be6d0a944daaff8c/build_script_build-be6d0a944daaff8c.d: /Users/brunomassaini/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/httparse-1.10.1/build.rs
+
+/Users/brunomassaini/Git/JWNews/jw-news-reader-api/target/release/build/httparse-be6d0a944daaff8c/build_script_build-be6d0a944daaff8c: /Users/brunomassaini/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/httparse-1.10.1/build.rs
+
+/Users/brunomassaini/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/httparse-1.10.1/build.rs:
